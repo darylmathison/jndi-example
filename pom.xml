@@ -4,7 +4,13 @@
     <groupId>com.darylmathison</groupId>
     <artifactId>jndi-example</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <modules>
+        <module>example1</module>
+        <module>example2</module>
+        <module>example3</module>
+        <module>example4</module>
+    </modules>
+    <packaging>pom</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.7</maven.compiler.source>
@@ -23,6 +29,13 @@
             <plugin>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>2.6</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>${example.mainclass}</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
             </plugin>
         </plugins>
     </build>
