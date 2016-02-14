@@ -24,11 +24,6 @@ version: 1
 #   http://www.rfc-editor.org/rfc/rfc2606.txt
 #
 #
-dn: dc=example,dc=com
-objectClass: domain
-objectClass: extensibleObject
-objectClass: top
-dc: example
 
 dn: ou=java,dc=example,dc=com
 ou: java
